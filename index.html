@@ -1,0 +1,1286 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/pathao-app-system-analysis-and-design/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlowFix</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script type="module" crossorigin src="/pathao-app-system-analysis-and-design/assets/index-C9MNCHjz.js"></script>
+  <link rel="stylesheet" crossorigin href="/pathao-app-system-analysis-and-design/assets/index-uhCIg0DM.css">
+</head>
+
+<body class="bg-pathao-light text-pathao-dark font-sans antialiased overflow-x-hidden">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex-shrink-0 flex items-center font-bold text-xl tracking-tight text-pathao-dark">
+          <span class="text-pathao-red mr-2"><i data-lucide="layers"></i></span>
+          FlowFix
+        </div>
+        <div class="hidden md:flex space-x-6 items-center text-sm font-medium">
+          <a href="#overview" class="text-gray-600 hover:text-pathao-red transition-colors">Overview</a>
+          <a href="#problems" class="text-gray-600 hover:text-pathao-red transition-colors">Problems</a>
+          <a href="#solution" class="text-gray-600 hover:text-pathao-red transition-colors">Solution</a>
+          <a href="#design" class="text-gray-600 hover:text-pathao-red transition-colors">System Design</a>
+          <a href="#ui" class="text-gray-600 hover:text-pathao-red transition-colors">UI Design</a>
+          <a href="#design"
+            class="bg-pathao-red text-white px-4 py-2 rounded-full hover:bg-red-600 transition-colors shadow-md shadow-red-200">Explore
+            System Design</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="app">
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
+      <div
+        class="absolute top-0 right-0 -z-10 w-96 h-96 bg-red-50 rounded-full blur-3xl opacity-50 translate-x-1/3 -translate-y-1/3">
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="fade-in">
+          <div
+            class="inline-flex items-center px-3 py-1 rounded-full bg-red-50 text-pathao-red text-xs font-semibold tracking-wide uppercase mb-6 border border-red-100">
+            System Analysis & Design Project
+          </div>
+          <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-4 text-gray-900">
+            FlowFix <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-pathao-red to-red-500">System Analysis &
+              Design</span>
+          </h1>
+          <h2 class="text-xl font-medium text-gray-500 mb-6">Integrated Incremental Improvement System</h2>
+          <p class="text-lg text-gray-600 mb-8 max-w-xl leading-relaxed">
+            A structured analysis and incremental redesign of a multi-service digital platform focused on performance,
+            location accuracy, booking reliability, pricing transparency, and customer support.
+          </p>
+
+          <div class="flex flex-wrap gap-4 mb-10">
+            <a href="#overview"
+              class="bg-pathao-dark text-white px-6 py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors shadow-lg shadow-gray-200 flex items-center">
+              Explore the Project <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+            </a>
+            <a href="#design"
+              class="bg-white text-pathao-dark border border-gray-200 px-6 py-3 rounded-xl font-medium hover:bg-gray-50 transition-colors flex items-center">
+              View Architecture <i data-lucide="layout-template" class="ml-2 w-4 h-4"></i>
+            </a>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-md border border-gray-200">System
+              Analysis</span>
+            <span class="text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-md border border-gray-200">SDLC</span>
+            <span class="text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-md border border-gray-200">DFD</span>
+            <span class="text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-md border border-gray-200">ER
+              Diagram</span>
+            <span class="text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-md border border-gray-200">Database
+              Design</span>
+            <span class="text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-md border border-gray-200">UI/UX</span>
+            <span class="text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-md border border-gray-200">Feasibility
+              Analysis</span>
+          </div>
+        </div>
+
+        <div class="fade-in lg:ml-auto relative w-full h-[500px]">
+          <!-- Abstract Dashboard Visualization -->
+          <div
+            class="absolute inset-0 bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 flex flex-col gap-4 overflow-hidden card-hover">
+            <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+              <div class="w-20 h-4 bg-gray-200 rounded animate-pulse"></div>
+              <div class="flex gap-2">
+                <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+              </div>
+            </div>
+
+            <div class="flex-1 flex items-center justify-center relative">
+              <!-- Nodes -->
+              <div class="grid grid-cols-2 gap-4 w-full h-full relative z-10">
+                <div
+                  class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-center">
+                  <i data-lucide="user" class="text-gray-400 mb-2"></i>
+                  <span class="text-xs font-semibold text-gray-600">User</span>
+                </div>
+                <div
+                  class="bg-red-50 rounded-xl p-4 flex flex-col items-center justify-center border border-red-100 shadow-sm text-center">
+                  <i data-lucide="map-pin" class="text-pathao-red mb-2"></i>
+                  <span class="text-xs font-semibold text-pathao-red">Location Validation</span>
+                </div>
+                <div
+                  class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-center">
+                  <i data-lucide="car" class="text-gray-400 mb-2"></i>
+                  <span class="text-xs font-semibold text-gray-600">Provider Matching</span>
+                </div>
+                <div
+                  class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-center">
+                  <i data-lucide="credit-card" class="text-gray-400 mb-2"></i>
+                  <span class="text-xs font-semibold text-gray-600">Payment</span>
+                </div>
+              </div>
+
+              <!-- Connecting SVG Lines -->
+              <svg class="absolute inset-0 w-full h-full z-0" pointer-events="none">
+                <path d="M 120 80 Q 200 80 250 80" stroke="#fca5a5" stroke-width="2" fill="none" stroke-dasharray="4"
+                  class="path-anim" />
+                <path d="M 250 140 Q 250 200 120 250" stroke="#e5e7eb" stroke-width="2" fill="none" stroke-dasharray="4"
+                  class="path-anim" style="animation-delay: 0.5s;" />
+                <path d="M 120 250 Q 200 250 250 250" stroke="#e5e7eb" stroke-width="2" fill="none" stroke-dasharray="4"
+                  class="path-anim" style="animation-delay: 1s;" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900">Understanding the Existing System</h2>
+          <p class="text-gray-600">
+            Pathao is a multi-service digital platform supporting services such as Ride, Food, Parcel, and Courier. This
+            academic study analyzes the system from a System Analysis and Design perspective and identifies areas where
+            reliability, usability, transparency, and operational efficiency can be improved.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm overflow-x-auto fade-in">
+          <div class="flex flex-nowrap md:flex-wrap justify-center items-center gap-4 min-w-[800px] md:min-w-full">
+            <!-- Workflow Nodes -->
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-white p-3 rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700 whitespace-nowrap">
+                User Login</div>
+              <i data-lucide="arrow-right" class="text-gray-300 w-4 h-4"></i>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-white p-3 rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700 whitespace-nowrap">
+                Select Service</div>
+              <i data-lucide="arrow-right" class="text-gray-300 w-4 h-4"></i>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-white p-3 rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700 whitespace-nowrap">
+                Enter Info</div>
+              <i data-lucide="arrow-right" class="text-gray-300 w-4 h-4"></i>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-white p-3 rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700 whitespace-nowrap">
+                Processing</div>
+              <i data-lucide="arrow-right" class="text-gray-300 w-4 h-4"></i>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-white p-3 rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700 whitespace-nowrap">
+                Provider Assignment</div>
+              <i data-lucide="arrow-right" class="text-gray-300 w-4 h-4"></i>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-white p-3 rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700 whitespace-nowrap">
+                Live Tracking</div>
+              <i data-lucide="arrow-right" class="text-gray-300 w-4 h-4"></i>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-white p-3 rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700 whitespace-nowrap">
+                Service Completion</div>
+              <i data-lucide="arrow-right" class="text-gray-300 w-4 h-4"></i>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-white p-3 rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700 whitespace-nowrap">
+                Payment</div>
+              <i data-lucide="arrow-right" class="text-gray-300 w-4 h-4"></i>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-white p-3 rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700 whitespace-nowrap">
+                Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section id="problems" class="py-20 bg-pathao-light relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 fade-in">5 Core Problems Identified</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Card 1 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 card-hover fade-in">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-pathao-red">
+                <i data-lucide="activity"></i>
+              </div>
+              <span class="text-4xl font-bold text-gray-100">01</span>
+            </div>
+            <h3 class="text-lg font-bold mb-3 text-gray-900">Inconsistent Application Performance</h3>
+            <p class="text-sm text-gray-600 mb-4">Slow loading, delayed responses, temporary lag, and inconsistent
+              responsiveness can negatively affect real-time service usage.</p>
+            <div class="bg-red-50 rounded-lg p-3 border border-red-100">
+              <span class="text-xs font-semibold text-pathao-red uppercase tracking-wide block mb-1">Impact</span>
+              <ul class="text-xs text-red-900 list-disc list-inside">
+                <li>Reduced user confidence</li>
+                <li>Slower transactions</li>
+                <li>More customer complaints</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 card-hover fade-in"
+            style="animation-delay: 0.1s;">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-pathao-red">
+                <i data-lucide="map"></i>
+              </div>
+              <span class="text-4xl font-bold text-gray-100">02</span>
+            </div>
+            <h3 class="text-lg font-bold mb-3 text-gray-900">Location Tracking & Map Accuracy</h3>
+            <p class="text-sm text-gray-600 mb-4">Incorrect pickup locations, GPS inaccuracies, and delayed map updates
+              can create coordination problems between customers and providers.</p>
+            <div class="bg-red-50 rounded-lg p-3 border border-red-100">
+              <span class="text-xs font-semibold text-pathao-red uppercase tracking-wide block mb-1">Impact</span>
+              <ul class="text-xs text-red-900 list-disc list-inside">
+                <li>Longer waiting times</li>
+                <li>Wrong pickup points</li>
+                <li>Reduced operational efficiency</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 card-hover fade-in"
+            style="animation-delay: 0.2s;">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-pathao-red">
+                <i data-lucide="clock"></i>
+              </div>
+              <span class="text-4xl font-bold text-gray-100">03</span>
+            </div>
+            <h3 class="text-lg font-bold mb-3 text-gray-900">Booking Reliability & Cancellation</h3>
+            <p class="text-sm text-gray-600 mb-4">Delayed provider acceptance, cancellations after confirmation, and
+              prolonged waiting can make booking unreliable.</p>
+            <div class="bg-red-50 rounded-lg p-3 border border-red-100">
+              <span class="text-xs font-semibold text-pathao-red uppercase tracking-wide block mb-1">Impact</span>
+              <ul class="text-xs text-red-900 list-disc list-inside">
+                <li>Schedule disruption</li>
+                <li>Customer frustration</li>
+                <li>Reduced trust</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 card-hover fade-in"
+            style="animation-delay: 0.3s;">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-pathao-red">
+                <i data-lucide="receipt"></i>
+              </div>
+              <span class="text-4xl font-bold text-gray-100">04</span>
+            </div>
+            <h3 class="text-lg font-bold mb-3 text-gray-900">Fare Transparency & Pricing Confusion</h3>
+            <p class="text-sm text-gray-600 mb-4">Users need clearer information regarding estimated fares, additional
+              charges, and differences between estimated and final prices.</p>
+            <div class="bg-red-50 rounded-lg p-3 border border-red-100">
+              <span class="text-xs font-semibold text-pathao-red uppercase tracking-wide block mb-1">Impact</span>
+              <ul class="text-xs text-red-900 list-disc list-inside">
+                <li>Pricing confusion</li>
+                <li>Customer disputes</li>
+                <li>Reduced confidence</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 card-hover fade-in"
+            style="animation-delay: 0.4s;">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-pathao-red">
+                <i data-lucide="headphones"></i>
+              </div>
+              <span class="text-4xl font-bold text-gray-100">05</span>
+            </div>
+            <h3 class="text-lg font-bold mb-3 text-gray-900">Customer Support & Complaint Resolution</h3>
+            <p class="text-sm text-gray-600 mb-4">Slow complaint handling and limited case visibility can reduce
+              customer satisfaction.</p>
+            <div class="bg-red-50 rounded-lg p-3 border border-red-100">
+              <span class="text-xs font-semibold text-pathao-red uppercase tracking-wide block mb-1">Impact</span>
+              <ul class="text-xs text-red-900 list-disc list-inside">
+                <li>Unresolved cases</li>
+                <li>Higher support pressure</li>
+                <li>Reduced customer loyalty</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem -> Improvement Mapping Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-16 text-center text-gray-900 fade-in">Mapping Problems to Solutions</h2>
+
+        <div class="flex flex-col gap-6 fade-in">
+          <!-- Mapping 1 -->
+          <div class="flex flex-col md:flex-row items-center gap-4">
+            <div
+              class="flex-1 w-full bg-red-50 p-4 rounded-xl text-center border border-red-100 font-semibold text-gray-800">
+              Application Performance</div>
+            <div class="text-pathao-red rotate-90 md:rotate-0"><i data-lucide="arrow-right" class="w-6 h-6"></i></div>
+            <div
+              class="flex-1 w-full bg-green-50 p-4 rounded-xl text-center border border-green-100 font-semibold text-gray-800">
+              Performance Monitoring & Optimization</div>
+          </div>
+          <!-- Mapping 2 -->
+          <div class="flex flex-col md:flex-row items-center gap-4">
+            <div
+              class="flex-1 w-full bg-red-50 p-4 rounded-xl text-center border border-red-100 font-semibold text-gray-800">
+              Location Accuracy</div>
+            <div class="text-pathao-red rotate-90 md:rotate-0"><i data-lucide="arrow-right" class="w-6 h-6"></i></div>
+            <div
+              class="flex-1 w-full bg-green-50 p-4 rounded-xl text-center border border-green-100 font-semibold text-gray-800">
+              GPS/Map Location Validation</div>
+          </div>
+          <!-- Mapping 3 -->
+          <div class="flex flex-col md:flex-row items-center gap-4">
+            <div
+              class="flex-1 w-full bg-red-50 p-4 rounded-xl text-center border border-red-100 font-semibold text-gray-800">
+              Booking Reliability</div>
+            <div class="text-pathao-red rotate-90 md:rotate-0"><i data-lucide="arrow-right" class="w-6 h-6"></i></div>
+            <div
+              class="flex-1 w-full bg-green-50 p-4 rounded-xl text-center border border-green-100 font-semibold text-gray-800">
+              Improved Matching & Auto-Reassignment</div>
+          </div>
+          <!-- Mapping 4 -->
+          <div class="flex flex-col md:flex-row items-center gap-4">
+            <div
+              class="flex-1 w-full bg-red-50 p-4 rounded-xl text-center border border-red-100 font-semibold text-gray-800">
+              Fare Transparency</div>
+            <div class="text-pathao-red rotate-90 md:rotate-0"><i data-lucide="arrow-right" class="w-6 h-6"></i></div>
+            <div
+              class="flex-1 w-full bg-green-50 p-4 rounded-xl text-center border border-green-100 font-semibold text-gray-800">
+              Clear Fare Breakdown</div>
+          </div>
+          <!-- Mapping 5 -->
+          <div class="flex flex-col md:flex-row items-center gap-4">
+            <div
+              class="flex-1 w-full bg-red-50 p-4 rounded-xl text-center border border-red-100 font-semibold text-gray-800">
+              Customer Support</div>
+            <div class="text-pathao-red rotate-90 md:rotate-0"><i data-lucide="arrow-right" class="w-6 h-6"></i></div>
+            <div
+              class="flex-1 w-full bg-green-50 p-4 rounded-xl text-center border border-green-100 font-semibold text-gray-800">
+              Centralized Complaint Management</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feasibility Section -->
+    <section class="py-20 bg-pathao-light">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 fade-in">Is the Improvement Practical?</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <!-- Feasibility Cards -->
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 fade-in card-hover">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="font-bold text-lg">Technical Feasibility</h3>
+              <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">HIGH</span>
+            </div>
+            <p class="text-sm text-gray-600">Most proposed improvements can be implemented through software
+              optimization, GPS/map integration, improved algorithms, monitoring, and database enhancements.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 fade-in card-hover"
+            style="animation-delay: 0.1s;">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="font-bold text-lg">Operational Feasibility</h3>
+              <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">HIGH</span>
+            </div>
+            <p class="text-sm text-gray-600">The existing user workflow remains largely familiar, reducing user
+              adaptation and operational disruption.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 fade-in card-hover"
+            style="animation-delay: 0.2s;">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="font-bold text-lg">Economic Feasibility</h3>
+              <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">FEASIBLE</span>
+            </div>
+            <p class="text-sm text-gray-600">Incremental enhancement requires investment but avoids the much larger cost
+              and risk associated with completely replacing the existing platform.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Candidate Comparison -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 fade-in">Choosing the Improvement Strategy</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <!-- Candidate I -->
+          <div class="bg-pathao-light p-8 rounded-2xl border border-red-200 relative overflow-hidden fade-in shadow-md">
+            <div class="absolute top-0 right-0 bg-pathao-red text-white text-xs font-bold px-4 py-1 rounded-bl-lg">
+              Selected Approach</div>
+            <h3 class="text-xl font-bold mb-2">Candidate System I</h3>
+            <h4 class="text-pathao-red font-semibold mb-6">Integrated Incremental Improvement System</h4>
+
+            <ul class="space-y-2 mb-8 text-sm text-gray-700">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>
+                Incremental improvement</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>
+                Moderate application changes</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>
+                Medium initial cost & complexity</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Low
+                user adaptation</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> High
+                reliability improvement</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>
+                Lower implementation risk</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>
+                Strong problem coverage</li>
+            </ul>
+
+            <div>
+              <div class="flex justify-between text-sm font-bold mb-1">
+                <span>Score: 435 / 500</span>
+                <span>87%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-pathao-red h-2.5 rounded-full" style="width: 87%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Candidate II -->
+          <div class="bg-white p-8 rounded-2xl border border-gray-200 fade-in">
+            <h3 class="text-xl font-bold mb-2">Candidate System II</h3>
+            <h4 class="text-gray-500 font-semibold mb-6">Intelligent Predictive Service Management System</h4>
+
+            <ul class="space-y-2 mb-8 text-sm text-gray-700">
+              <li class="flex items-center gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-yellow-500"></i>
+                Advanced transformation</li>
+              <li class="flex items-center gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-yellow-500"></i>
+                Predictive analytics</li>
+              <li class="flex items-center gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-yellow-500"></i>
+                Intelligent location validation</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>
+                Machine-learning potential</li>
+              <li class="flex items-center gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-yellow-500"></i>
+                Higher technical complexity</li>
+              <li class="flex items-center gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-yellow-500"></i>
+                Higher infrastructure requirements</li>
+              <li class="flex items-center gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-yellow-500"></i>
+                Higher initial implementation risk</li>
+            </ul>
+
+            <div>
+              <div class="flex justify-between text-sm font-bold mb-1 text-gray-600">
+                <span>Score: 430 / 500</span>
+                <span>86%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-gray-400 h-2.5 rounded-full" style="width: 86%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-900 text-white p-6 rounded-2xl text-center fade-in max-w-3xl mx-auto shadow-xl">
+          <h4 class="text-lg font-bold mb-2">Reason for Selection</h4>
+          <p class="text-sm text-gray-300">It provides a practical balance between system improvement, implementation
+            cost, user familiarity, maintainability, and implementation risk.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proposed Solution Section -->
+    <section id="solution" class="py-20 bg-pathao-light">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-4 text-center text-gray-900 fade-in">The Integrated Incremental Improvement
+          System</h2>
+        <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto fade-in">Targeted, modular improvements designed to
+          enhance reliability without rebuilding the entire platform.</p>
+
+        <div class="flex flex-col gap-6 max-w-5xl mx-auto">
+          <!-- Module 1 -->
+          <div
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-6 items-center fade-in card-hover relative overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-2 bg-pathao-red"></div>
+            <div class="w-16 h-16 rounded-full bg-red-50 flex items-center justify-center text-pathao-red shrink-0">
+              <i data-lucide="zap"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">01. Performance Optimization Module</h3>
+              <div class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <span class="bg-gray-100 px-3 py-1 rounded-full">App monitoring</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">API optimization</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Efficient data retrieval</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Caching</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Server-load monitoring</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 2 -->
+          <div
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-6 items-center fade-in card-hover relative overflow-hidden"
+            style="animation-delay: 0.1s;">
+            <div class="absolute left-0 top-0 bottom-0 w-2 bg-pathao-dark"></div>
+            <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-pathao-dark shrink-0">
+              <i data-lucide="crosshair"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">02. Location Accuracy Module</h3>
+              <div class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <span class="bg-gray-100 px-3 py-1 rounded-full">GPS synchronization</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Pickup confirmation</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Accuracy indication</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Manual correction</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 3 -->
+          <div
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-6 items-center fade-in card-hover relative overflow-hidden"
+            style="animation-delay: 0.2s;">
+            <div class="absolute left-0 top-0 bottom-0 w-2 bg-pathao-red"></div>
+            <div class="w-16 h-16 rounded-full bg-red-50 flex items-center justify-center text-pathao-red shrink-0">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">03. Booking Reliability Module</h3>
+              <div class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Improved matching</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Status visibility</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Auto reassignment</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Cancellation tracking</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 4 -->
+          <div
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-6 items-center fade-in card-hover relative overflow-hidden"
+            style="animation-delay: 0.3s;">
+            <div class="absolute left-0 top-0 bottom-0 w-2 bg-pathao-dark"></div>
+            <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-pathao-dark shrink-0">
+              <i data-lucide="banknote"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">04. Transparent Fare Module</h3>
+              <div class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Detailed breakdown</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Clear charges</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Estimated vs final comparison</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 5 -->
+          <div
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-6 items-center fade-in card-hover relative overflow-hidden"
+            style="animation-delay: 0.4s;">
+            <div class="absolute left-0 top-0 bottom-0 w-2 bg-pathao-red"></div>
+            <div class="w-16 h-16 rounded-full bg-red-50 flex items-center justify-center text-pathao-red shrink-0">
+              <i data-lucide="message-square"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">05. Customer Support Management Module</h3>
+              <div class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Centralized complaints</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Auto categorization</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Priority assignment</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full">Status tracking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Improved Workflow -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 fade-in">Improved System Workflow</h2>
+
+        <div class="hidden lg:block relative fade-in">
+          <!-- Horizontal Timeline Desktop -->
+          <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-200 -translate-y-1/2"></div>
+          <div class="absolute top-1/2 left-0 w-3/4 h-1 bg-pathao-red -translate-y-1/2"
+            style="background: linear-gradient(90deg, #E4313B 0%, #ff8a8a 100%);"></div>
+
+          <div class="flex justify-between relative z-10">
+            <!-- Stage 1 -->
+            <div class="flex flex-col items-center group">
+              <div
+                class="w-8 h-8 rounded-full bg-pathao-red border-4 border-white shadow flex items-center justify-center mb-4 transition-transform group-hover:scale-125">
+              </div>
+              <div class="bg-white p-3 rounded-lg shadow border border-gray-100 text-center text-xs font-bold w-24">Auth
+                &<br />Select</div>
+            </div>
+            <!-- Stage 2 -->
+            <div class="flex flex-col items-center group">
+              <div
+                class="w-8 h-8 rounded-full bg-pathao-red border-4 border-white shadow flex items-center justify-center mb-4 transition-transform group-hover:scale-125">
+              </div>
+              <div
+                class="bg-white p-3 rounded-lg shadow border border-red-200 text-center text-xs font-bold w-24 text-pathao-red">
+                Location Validated</div>
+            </div>
+            <!-- Stage 3 -->
+            <div class="flex flex-col items-center group">
+              <div
+                class="w-8 h-8 rounded-full bg-pathao-red border-4 border-white shadow flex items-center justify-center mb-4 transition-transform group-hover:scale-125">
+              </div>
+              <div
+                class="bg-white p-3 rounded-lg shadow border border-red-200 text-center text-xs font-bold w-24 text-pathao-red">
+                Provider Match</div>
+            </div>
+            <!-- Stage 4 -->
+            <div class="flex flex-col items-center group">
+              <div
+                class="w-8 h-8 rounded-full bg-pathao-red border-4 border-white shadow flex items-center justify-center mb-4 transition-transform group-hover:scale-125">
+              </div>
+              <div
+                class="bg-white p-3 rounded-lg shadow border border-red-200 text-center text-xs font-bold w-24 text-pathao-red">
+                Fare Calc</div>
+            </div>
+            <!-- Stage 5 -->
+            <div class="flex flex-col items-center group">
+              <div
+                class="w-8 h-8 rounded-full bg-pathao-red border-4 border-white shadow flex items-center justify-center mb-4 transition-transform group-hover:scale-125">
+              </div>
+              <div class="bg-white p-3 rounded-lg shadow border border-gray-100 text-center text-xs font-bold w-24">Live
+                Track</div>
+            </div>
+            <!-- Stage 6 -->
+            <div class="flex flex-col items-center group">
+              <div
+                class="w-8 h-8 rounded-full bg-gray-300 border-4 border-white shadow flex items-center justify-center mb-4 transition-transform group-hover:scale-125">
+              </div>
+              <div class="bg-white p-3 rounded-lg shadow border border-gray-100 text-center text-xs font-bold w-24">
+                Complete & Pay</div>
+            </div>
+            <!-- Stage 7 -->
+            <div class="flex flex-col items-center group">
+              <div
+                class="w-8 h-8 rounded-full bg-gray-300 border-4 border-white shadow flex items-center justify-center mb-4 transition-transform group-hover:scale-125">
+              </div>
+              <div
+                class="bg-white p-3 rounded-lg shadow border border-red-200 text-center text-xs font-bold w-24 text-pathao-red">
+                History & Support</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vertical Timeline Mobile -->
+        <div class="lg:hidden flex flex-col gap-4 border-l-2 border-pathao-red ml-4 pl-6 fade-in">
+          <div class="relative">
+            <div
+              class="absolute -left-[31px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-pathao-red border-2 border-white">
+            </div>
+            <div class="bg-gray-50 p-3 rounded-lg font-bold text-sm">User Authentication</div>
+          </div>
+          <div class="relative">
+            <div
+              class="absolute -left-[31px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-pathao-red border-2 border-white">
+            </div>
+            <div class="bg-gray-50 p-3 rounded-lg font-bold text-sm">Service Selection & Info</div>
+          </div>
+          <div class="relative">
+            <div
+              class="absolute -left-[31px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-pathao-red border-2 border-white">
+            </div>
+            <div class="bg-red-50 p-3 rounded-lg font-bold text-sm text-pathao-red border border-red-100">Location
+              Validation</div>
+          </div>
+          <div class="relative">
+            <div
+              class="absolute -left-[31px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-pathao-red border-2 border-white">
+            </div>
+            <div class="bg-red-50 p-3 rounded-lg font-bold text-sm text-pathao-red border border-red-100">Provider
+              Matching & Reassignment</div>
+          </div>
+          <div class="relative">
+            <div
+              class="absolute -left-[31px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-pathao-red border-2 border-white">
+            </div>
+            <div class="bg-red-50 p-3 rounded-lg font-bold text-sm text-pathao-red border border-red-100">Fare
+              Calculation & Confirmation</div>
+          </div>
+          <div class="relative">
+            <div
+              class="absolute -left-[31px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gray-300 border-2 border-white">
+            </div>
+            <div class="bg-gray-50 p-3 rounded-lg font-bold text-sm">Live Tracking & Completion</div>
+          </div>
+          <div class="relative">
+            <div
+              class="absolute -left-[31px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gray-300 border-2 border-white">
+            </div>
+            <div class="bg-gray-50 p-3 rounded-lg font-bold text-sm">Payment & Rating</div>
+          </div>
+          <div class="relative">
+            <div
+              class="absolute -left-[31px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gray-300 border-2 border-white">
+            </div>
+            <div class="bg-red-50 p-3 rounded-lg font-bold text-sm text-pathao-red border border-red-100">Complaint
+              Management / History</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Implementation Roadmap -->
+    <section class="py-20 bg-pathao-light">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 fade-in">Implementation Roadmap</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+          <!-- Phase 1 -->
+          <div class="bg-white p-5 rounded-xl border-t-4 border-pathao-dark shadow-sm fade-in card-hover">
+            <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Phase 01</h3>
+            <h4 class="font-bold text-gray-900 mb-3 leading-tight">Performance & Monitoring</h4>
+            <p class="text-xs text-gray-600">Establish performance monitoring and identify recurring response-time
+              problems.</p>
+          </div>
+          <!-- Phase 2 -->
+          <div class="bg-white p-5 rounded-xl border-t-4 border-pathao-red shadow-sm fade-in card-hover"
+            style="animation-delay: 0.1s;">
+            <h3 class="text-xs font-bold text-pathao-red uppercase tracking-widest mb-1">Phase 02</h3>
+            <h4 class="font-bold text-gray-900 mb-3 leading-tight">Location & Booking</h4>
+            <p class="text-xs text-gray-600">Improve GPS accuracy, pickup confirmation, provider matching, and
+              cancellation handling.</p>
+          </div>
+          <!-- Phase 3 -->
+          <div class="bg-white p-5 rounded-xl border-t-4 border-pathao-dark shadow-sm fade-in card-hover"
+            style="animation-delay: 0.2s;">
+            <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Phase 03</h3>
+            <h4 class="font-bold text-gray-900 mb-3 leading-tight">Fare Transparency</h4>
+            <p class="text-xs text-gray-600">Improve presentation of fare components and transaction summaries.</p>
+          </div>
+          <!-- Phase 4 -->
+          <div class="bg-white p-5 rounded-xl border-t-4 border-pathao-red shadow-sm fade-in card-hover"
+            style="animation-delay: 0.3s;">
+            <h3 class="text-xs font-bold text-pathao-red uppercase tracking-widest mb-1">Phase 04</h3>
+            <h4 class="font-bold text-gray-900 mb-3 leading-tight">Customer Support</h4>
+            <p class="text-xs text-gray-600">Introduce centralized complaint management, categorization, tracking, and
+              transaction integration.</p>
+          </div>
+          <!-- Phase 5 -->
+          <div class="bg-white p-5 rounded-xl border-t-4 border-pathao-dark shadow-sm fade-in card-hover"
+            style="animation-delay: 0.4s;">
+            <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Phase 05</h3>
+            <h4 class="font-bold text-gray-900 mb-3 leading-tight">Continuous Monitoring</h4>
+            <p class="text-xs text-gray-600">Evaluate performance metrics, complaint patterns, cancellation rates,
+              location issues, and feedback.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- System Design Section -->
+    <section id="design" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-4 text-center text-gray-900 fade-in">From Analysis to System Design</h2>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto fade-in">The selected incremental improvement
+          strategy transformed into structured processes, architectures, and UI concepts.</p>
+
+        <!-- Tabs -->
+        <div class="flex justify-center mb-8 fade-in flex-wrap gap-2">
+          <button class="tab-btn px-6 py-2 rounded-full text-sm font-bold bg-pathao-red text-white transition-colors"
+            data-target="tab-arch">System Architecture</button>
+          <button
+            class="tab-btn px-6 py-2 rounded-full text-sm font-bold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors"
+            data-target="tab-usecase">Use Case Model</button>
+          <button
+            class="tab-btn px-6 py-2 rounded-full text-sm font-bold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors"
+            data-target="tab-db">Database Design</button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div
+          class="bg-gray-50 rounded-3xl p-6 md:p-10 border border-gray-100 shadow-inner fade-in min-h-[600px] flex items-center justify-center">
+
+          <!-- Architecture Tab -->
+          <div id="tab-arch" class="tab-content active w-full max-w-4xl">
+            <h3 class="text-xl font-bold mb-8 text-center">Proposed System Architecture</h3>
+            <div class="flex flex-col gap-6">
+              <!-- Layer 1 -->
+              <div class="bg-white p-6 rounded-xl border border-blue-200 shadow-sm relative">
+                <div
+                  class="absolute -left-3 top-1/2 -translate-y-1/2 bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded -rotate-90 origin-center whitespace-nowrap">
+                  Layer 1</div>
+                <h4 class="font-bold text-blue-900 mb-4 pl-6 text-center">Presentation Layer</h4>
+                <div class="flex justify-center gap-4 flex-wrap">
+                  <div class="bg-blue-50 px-4 py-2 rounded text-sm text-blue-800">Customer Interface</div>
+                  <div class="bg-blue-50 px-4 py-2 rounded text-sm text-blue-800">Provider Interface</div>
+                  <div class="bg-blue-50 px-4 py-2 rounded text-sm text-blue-800">Support Staff Interface</div>
+                </div>
+              </div>
+              <div class="flex justify-center"><i data-lucide="arrow-down" class="text-gray-400"></i></div>
+              <!-- Layer 2 -->
+              <div class="bg-white p-6 rounded-xl border border-green-200 shadow-sm relative">
+                <div
+                  class="absolute -left-3 top-1/2 -translate-y-1/2 bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded -rotate-90 origin-center whitespace-nowrap">
+                  Layer 2</div>
+                <h4 class="font-bold text-green-900 mb-4 pl-6 text-center">Application & Business Logic</h4>
+                <div class="flex justify-center gap-2 flex-wrap text-xs font-medium text-green-800">
+                  <span class="bg-green-50 px-3 py-1 rounded border border-green-100">Request Processing</span>
+                  <span class="bg-green-50 px-3 py-1 rounded border border-green-100">Location Validation</span>
+                  <span class="bg-green-50 px-3 py-1 rounded border border-green-100">Provider Matching</span>
+                  <span class="bg-green-50 px-3 py-1 rounded border border-green-100">Fare Calculation</span>
+                  <span class="bg-green-50 px-3 py-1 rounded border border-green-100">Complaint Processing</span>
+                </div>
+              </div>
+              <div class="flex justify-center"><i data-lucide="arrow-down" class="text-gray-400"></i></div>
+              <!-- Layer 3 -->
+              <div class="bg-white p-6 rounded-xl border border-purple-200 shadow-sm relative">
+                <div
+                  class="absolute -left-3 top-1/2 -translate-y-1/2 bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded -rotate-90 origin-center whitespace-nowrap">
+                  Layer 3</div>
+                <h4 class="font-bold text-purple-900 mb-4 pl-6 text-center">Data Management Layer</h4>
+                <div class="flex justify-center gap-2 flex-wrap text-xs text-purple-800">
+                  <span class="px-2 py-1">User Data</span> • <span class="px-2 py-1">Service Requests</span> • <span
+                    class="px-2 py-1">Provider Data</span> • <span class="px-2 py-1">Location Data</span> • <span
+                    class="px-2 py-1">Fare & Payment</span> • <span class="px-2 py-1">Complaints</span>
+                </div>
+              </div>
+              <div class="flex justify-center"><i data-lucide="arrow-down" class="text-gray-400"></i></div>
+              <!-- Layer 4 -->
+              <div class="bg-white p-6 rounded-xl border border-gray-300 shadow-sm relative">
+                <div
+                  class="absolute -left-3 top-1/2 -translate-y-1/2 bg-gray-200 text-gray-800 text-xs font-bold px-2 py-1 rounded -rotate-90 origin-center whitespace-nowrap">
+                  Layer 4</div>
+                <h4 class="font-bold text-gray-900 mb-4 pl-6 text-center">External Service Integration</h4>
+                <div class="flex justify-center gap-4 flex-wrap">
+                  <div class="bg-gray-100 px-4 py-2 rounded text-sm text-gray-700 flex items-center gap-2"><i
+                      data-lucide="map" class="w-4 h-4"></i> Maps API</div>
+                  <div class="bg-gray-100 px-4 py-2 rounded text-sm text-gray-700 flex items-center gap-2"><i
+                      data-lucide="credit-card" class="w-4 h-4"></i> Payment Gateway</div>
+                  <div class="bg-gray-100 px-4 py-2 rounded text-sm text-gray-700 flex items-center gap-2"><i
+                      data-lucide="bell" class="w-4 h-4"></i> Notification Service</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Use Case Tab -->
+          <div id="tab-usecase" class="tab-content w-full max-w-4xl">
+            <h3 class="text-xl font-bold mb-8 text-center">Simplified Use Case Diagram</h3>
+            <div class="flex flex-col md:flex-row justify-between gap-8">
+              <!-- Customer -->
+              <div class="flex-1 bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                <div class="w-16 h-16 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4"><i
+                    data-lucide="user" class="text-gray-600"></i></div>
+                <h4 class="font-bold text-lg mb-4">Customer</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li class="bg-gray-50 p-2 rounded border border-gray-100">Select Service & Location</li>
+                  <li class="bg-gray-50 p-2 rounded border border-gray-100">View Estimated Fare</li>
+                  <li class="bg-gray-50 p-2 rounded border border-gray-100">Track Service</li>
+                  <li class="bg-gray-50 p-2 rounded border border-gray-100">Make Payment & Rate</li>
+                  <li class="bg-pathao-light text-pathao-red font-medium p-2 rounded border border-red-100">Submit /
+                    Track Complaint</li>
+                </ul>
+              </div>
+
+              <!-- System Boundary / Interactions -->
+              <div class="hidden md:flex flex-col justify-center items-center text-gray-400 gap-4">
+                <i data-lucide="arrow-left-right"></i>
+                <div class="w-[1px] h-32 bg-gray-300"></div>
+                <i data-lucide="arrow-left-right"></i>
+              </div>
+
+              <!-- Provider & Staff -->
+              <div class="flex-1 flex flex-col gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                  <div class="w-12 h-12 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-2"><i
+                      data-lucide="car" class="text-gray-600"></i></div>
+                  <h4 class="font-bold mb-4">Service Provider</h4>
+                  <ul class="text-sm text-gray-600 space-y-2">
+                    <li class="bg-gray-50 p-2 rounded border border-gray-100">Accept / Reject Request</li>
+                    <li class="bg-gray-50 p-2 rounded border border-gray-100">Update Service Status</li>
+                  </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                  <div class="w-12 h-12 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-2"><i
+                      data-lucide="headphones" class="text-gray-600"></i></div>
+                  <h4 class="font-bold mb-4">Support Staff</h4>
+                  <ul class="text-sm text-gray-600 space-y-2">
+                    <li class="bg-pathao-light text-pathao-red font-medium p-2 rounded border border-red-100">Review &
+                      Update Complaints</li>
+                    <li class="bg-gray-50 p-2 rounded border border-gray-100">Communicate Resolution</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DB Tab -->
+          <div id="tab-db" class="tab-content w-full">
+            <h3 class="text-xl font-bold mb-8 text-center">Structured Data for an Improved Service Ecosystem</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- User -->
+              <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                <div class="bg-gray-100 px-4 py-2 font-bold text-sm border-b border-gray-200 flex items-center gap-2"><i
+                    data-lucide="table" class="w-4 h-4"></i> USER</div>
+                <div class="p-4 text-xs font-mono text-gray-600 leading-relaxed">
+                  <span class="text-pathao-red font-bold">User_ID
+                    (PK)</span><br />Name<br />Phone<br />Email<br />Account_Status
+                </div>
+              </div>
+              <!-- Provider -->
+              <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                <div class="bg-gray-100 px-4 py-2 font-bold text-sm border-b border-gray-200 flex items-center gap-2"><i
+                    data-lucide="table" class="w-4 h-4"></i> PROVIDER</div>
+                <div class="p-4 text-xs font-mono text-gray-600 leading-relaxed">
+                  <span class="text-pathao-red font-bold">Provider_ID
+                    (PK)</span><br />Name<br />Provider_Type<br />Availability_Status<br />Current_Location
+                </div>
+              </div>
+              <!-- Request -->
+              <div
+                class="bg-white rounded-lg shadow-sm border border-blue-200 overflow-hidden lg:col-span-1 md:col-span-2">
+                <div class="bg-blue-50 px-4 py-2 font-bold text-sm border-b border-blue-200 flex items-center gap-2"><i
+                    data-lucide="table" class="w-4 h-4 text-blue-600"></i> SERVICE_REQUEST</div>
+                <div class="p-4 text-xs font-mono text-gray-600 leading-relaxed grid grid-cols-2 gap-2">
+                  <div>
+                    <span class="text-pathao-red font-bold">Request_ID (PK)</span><br />User_ID (FK)<br />Provider_ID
+                    (FK)<br />Service_Type
+                  </div>
+                  <div>
+                    Pickup_Location<br />Destination<br />Request_Status<br />Request_Time
+                  </div>
+                </div>
+              </div>
+              <!-- Fare -->
+              <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                <div class="bg-gray-100 px-4 py-2 font-bold text-sm border-b border-gray-200 flex items-center gap-2"><i
+                    data-lucide="table" class="w-4 h-4"></i> FARE</div>
+                <div class="p-4 text-xs font-mono text-gray-600 leading-relaxed">
+                  <span class="text-pathao-red font-bold">Fare_ID (PK)</span><br />Request_ID
+                  (FK)<br />Estimated_Fare<br />Final_Fare
+                </div>
+              </div>
+              <!-- Complaint -->
+              <div class="bg-white rounded-lg shadow-sm border border-red-200 overflow-hidden">
+                <div class="bg-red-50 px-4 py-2 font-bold text-sm border-b border-red-200 flex items-center gap-2"><i
+                    data-lucide="table" class="w-4 h-4 text-pathao-red"></i> COMPLAINT</div>
+                <div class="p-4 text-xs font-mono text-gray-600 leading-relaxed">
+                  <span class="text-pathao-red font-bold">Complaint_ID (PK)</span><br />User_ID (FK)<br />Request_ID
+                  (FK)<br />Complaint_Status
+                </div>
+              </div>
+              <!-- Payment -->
+              <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                <div class="bg-gray-100 px-4 py-2 font-bold text-sm border-b border-gray-200 flex items-center gap-2"><i
+                    data-lucide="table" class="w-4 h-4"></i> PAYMENT</div>
+                <div class="p-4 text-xs font-mono text-gray-600 leading-relaxed">
+                  <span class="text-pathao-red font-bold">Payment_ID (PK)</span><br />Request_ID
+                  (FK)<br />Amount<br />Payment_Status
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- UI/UX Showcase Section -->
+    <section id="ui" class="py-20 bg-pathao-light overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-4 text-center text-gray-900 fade-in">UI/UX Design Showcase</h2>
+        <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto fade-in">Frontend-only concept mockups demonstrating
+          the proposed improvements.</p>
+
+        <div class="flex flex-wrap justify-center gap-8 fade-in pb-8">
+
+          <!-- Phone 1: Selection -->
+          <div
+            class="w-[280px] h-[580px] bg-white rounded-[3rem] shadow-xl border-[8px] border-gray-900 overflow-hidden relative shrink-0">
+            <div class="absolute top-0 w-full h-6 bg-gray-900 rounded-b-3xl z-10 flex justify-center">
+              <div class="w-20 h-4 bg-black rounded-full -mt-2"></div>
+            </div>
+            <div class="p-4 pt-12 h-full flex flex-col bg-gray-50">
+              <div class="flex justify-between items-center mb-6">
+                <i data-lucide="menu" class="w-5 h-5"></i>
+                <span class="font-bold text-pathao-red">pathao</span>
+                <div class="w-8 h-8 bg-gray-200 rounded-full"></div>
+              </div>
+              <h3 class="font-bold text-xl mb-4">Select Service</h3>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-white p-4 rounded-xl shadow-sm text-center border border-gray-100">
+                  <div
+                    class="w-10 h-10 mx-auto bg-red-100 text-pathao-red rounded-full flex items-center justify-center mb-2">
+                    <i data-lucide="car"></i>
+                  </div><span class="text-sm font-semibold">Ride</span>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm text-center border border-gray-100">
+                  <div
+                    class="w-10 h-10 mx-auto bg-red-100 text-pathao-red rounded-full flex items-center justify-center mb-2">
+                    <i data-lucide="pizza"></i>
+                  </div><span class="text-sm font-semibold">Food</span>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm text-center border border-gray-100">
+                  <div
+                    class="w-10 h-10 mx-auto bg-red-100 text-pathao-red rounded-full flex items-center justify-center mb-2">
+                    <i data-lucide="package"></i>
+                  </div><span class="text-sm font-semibold">Parcel</span>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm text-center border border-gray-100">
+                  <div
+                    class="w-10 h-10 mx-auto bg-red-100 text-pathao-red rounded-full flex items-center justify-center mb-2">
+                    <i data-lucide="truck"></i>
+                  </div><span class="text-sm font-semibold">Courier</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phone 2: Location -->
+          <div
+            class="w-[280px] h-[580px] bg-white rounded-[3rem] shadow-xl border-[8px] border-gray-900 overflow-hidden relative shrink-0">
+            <div class="absolute top-0 w-full h-6 bg-gray-900 rounded-b-3xl z-10 flex justify-center">
+              <div class="w-20 h-4 bg-black rounded-full -mt-2"></div>
+            </div>
+            <div class="h-full flex flex-col relative bg-green-50/50">
+              <div
+                class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-green-300 to-transparent">
+              </div>
+              <div class="pt-12 px-4 z-10">
+                <div class="bg-white rounded-xl shadow p-4 border border-gray-100 space-y-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <div class="flex-1 border-b border-gray-100 pb-2">
+                      <div class="text-xs text-gray-500">Pickup Location</div>
+                      <div class="font-semibold text-sm">Gulshan 1, Dhaka</div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="flex-1">
+                      <div class="text-xs text-gray-500">Destination</div>
+                      <div class="font-semibold text-sm">Banani Super Market</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-auto bg-white p-4 rounded-t-3xl shadow-[0_-10px_20px_rgba(0,0,0,0.05)] z-10">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-sm font-semibold">GPS Accuracy</span>
+                  <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">High (± 5m)</span>
+                </div>
+                <button
+                  class="w-full bg-pathao-red text-white font-bold py-3 rounded-xl shadow-lg shadow-red-200">Confirm
+                  Location</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phone 3: Fare & Complaint -->
+          <div
+            class="w-[280px] h-[580px] bg-white rounded-[3rem] shadow-xl border-[8px] border-gray-900 overflow-hidden relative shrink-0">
+            <div class="absolute top-0 w-full h-6 bg-gray-900 rounded-b-3xl z-10 flex justify-center">
+              <div class="w-20 h-4 bg-black rounded-full -mt-2"></div>
+            </div>
+            <div class="p-4 pt-12 h-full flex flex-col bg-gray-50">
+              <h3 class="font-bold text-lg mb-4 text-center border-b pb-2">Complaint Status</h3>
+              <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 mb-4">
+                <div class="flex justify-between items-start mb-2">
+                  <span class="font-bold text-sm">Fare Dispute</span>
+                  <span class="text-xs text-gray-400">#CMP-9281</span>
+                </div>
+                <p class="text-xs text-gray-600">"Driver charged extra 50 BDT at destination."</p>
+              </div>
+
+              <div class="flex-1 relative pl-6 mt-4">
+                <div class="absolute left-2.5 top-2 bottom-6 w-0.5 bg-gray-200"></div>
+                <div class="relative mb-6">
+                  <div class="absolute -left-[23px] w-3 h-3 bg-gray-400 rounded-full border-2 border-white"></div>
+                  <div class="text-xs font-bold">Submitted</div>
+                  <div class="text-[10px] text-gray-500">10:05 AM</div>
+                </div>
+                <div class="relative mb-6">
+                  <div class="absolute -left-[23px] w-3 h-3 bg-gray-400 rounded-full border-2 border-white"></div>
+                  <div class="text-xs font-bold">Assigned to Staff</div>
+                  <div class="text-[10px] text-gray-500">10:15 AM</div>
+                </div>
+                <div class="relative mb-6">
+                  <div
+                    class="absolute -left-[23px] w-3 h-3 bg-pathao-red rounded-full border-2 border-white animate-pulse shadow-[0_0_0_4px_rgba(228,49,59,0.2)]">
+                  </div>
+                  <div class="text-xs font-bold text-pathao-red">Under Review</div>
+                  <div class="text-[10px] text-gray-500">Currently active</div>
+                </div>
+                <div class="relative">
+                  <div class="absolute -left-[23px] w-3 h-3 bg-gray-200 rounded-full border-2 border-white"></div>
+                  <div class="text-xs font-bold text-gray-400">Resolved</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Outcomes & Conclusion -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20 items-center fade-in">
+          <div>
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">Before vs Proposed System</h2>
+            <div class="space-y-4">
+              <div class="flex items-center gap-4 p-4 rounded-xl border border-gray-100 bg-gray-50">
+                <i data-lucide="x-circle" class="text-red-500 w-5 h-5 shrink-0"></i>
+                <div class="text-sm text-gray-600 line-through">Performance inconsistency</div>
+                <i data-lucide="arrow-right" class="text-gray-400 mx-auto w-4 h-4 shrink-0"></i>
+                <div class="text-sm font-semibold text-green-700">Performance monitoring</div>
+              </div>
+              <div class="flex items-center gap-4 p-4 rounded-xl border border-gray-100 bg-gray-50">
+                <i data-lucide="x-circle" class="text-red-500 w-5 h-5 shrink-0"></i>
+                <div class="text-sm text-gray-600 line-through">Location ambiguity</div>
+                <i data-lucide="arrow-right" class="text-gray-400 mx-auto w-4 h-4 shrink-0"></i>
+                <div class="text-sm font-semibold text-green-700">Location validation</div>
+              </div>
+              <div class="flex items-center gap-4 p-4 rounded-xl border border-gray-100 bg-gray-50">
+                <i data-lucide="x-circle" class="text-red-500 w-5 h-5 shrink-0"></i>
+                <div class="text-sm text-gray-600 line-through">Booking uncertainty</div>
+                <i data-lucide="arrow-right" class="text-gray-400 mx-auto w-4 h-4 shrink-0"></i>
+                <div class="text-sm font-semibold text-green-700">Structured provider matching</div>
+              </div>
+              <div class="flex items-center gap-4 p-4 rounded-xl border border-gray-100 bg-gray-50">
+                <i data-lucide="x-circle" class="text-red-500 w-5 h-5 shrink-0"></i>
+                <div class="text-sm text-gray-600 line-through">Limited fare clarity</div>
+                <i data-lucide="arrow-right" class="text-gray-400 mx-auto w-4 h-4 shrink-0"></i>
+                <div class="text-sm font-semibold text-green-700">Transparent fare display</div>
+              </div>
+              <div class="flex items-center gap-4 p-4 rounded-xl border border-gray-100 bg-gray-50">
+                <i data-lucide="x-circle" class="text-red-500 w-5 h-5 shrink-0"></i>
+                <div class="text-sm text-gray-600 line-through">Slow complaint tracking</div>
+                <i data-lucide="arrow-right" class="text-gray-400 mx-auto w-4 h-4 shrink-0"></i>
+                <div class="text-sm font-semibold text-green-700">Centralized complaint management</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-pathao-dark text-white rounded-3xl p-10 shadow-2xl relative overflow-hidden">
+            <div
+              class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+            </div>
+            <h2 class="text-4xl font-bold mb-4">Improvement, Not Replacement.</h2>
+            <p class="text-gray-300 mb-10 leading-relaxed">
+              The proposed system retains the familiar structure of the existing service platform while introducing
+              targeted improvements in reliability, transparency, validation, data management, and customer support.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+              <div>
+                <div class="text-3xl font-bold text-pathao-red mb-1">5</div>
+                <div class="text-xs text-gray-400 uppercase tracking-wide">Problems Addressed</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-pathao-red mb-1">5</div>
+                <div class="text-xs text-gray-400 uppercase tracking-wide">Improvement Modules</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-pathao-red mb-1">4</div>
+                <div class="text-xs text-gray-400 uppercase tracking-wide">Architecture Layers</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-pathao-red mb-1">1</div>
+                <div class="text-xs text-gray-400 uppercase tracking-wide">Integrated Strategy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-200 pt-16">
+          <h3 class="text-center font-bold text-gray-400 uppercase tracking-wider mb-8 text-sm">Security & Data
+            Protection Core</h3>
+          <div class="flex flex-wrap justify-center gap-4 fade-in">
+            <div
+              class="bg-gray-50 px-6 py-3 rounded-full border border-gray-200 text-sm font-medium text-gray-700 flex items-center gap-2">
+              <i data-lucide="lock" class="w-4 h-4"></i> Auth & Authorization
+            </div>
+            <div
+              class="bg-gray-50 px-6 py-3 rounded-full border border-gray-200 text-sm font-medium text-gray-700 flex items-center gap-2">
+              <i data-lucide="database" class="w-4 h-4"></i> Secure Data Storage
+            </div>
+            <div
+              class="bg-gray-50 px-6 py-3 rounded-full border border-gray-200 text-sm font-medium text-gray-700 flex items-center gap-2">
+              <i data-lucide="map-pin-off" class="w-4 h-4"></i> Location Privacy
+            </div>
+            <div
+              class="bg-gray-50 px-6 py-3 rounded-full border border-gray-200 text-sm font-medium text-gray-700 flex items-center gap-2">
+              <i data-lucide="shield-alert" class="w-4 h-4"></i> Secure Payment Processing
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 border-t-4 border-pathao-red">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold mb-2">FlowFix</h2>
+          <p class="text-gray-400 mb-8">Academic Software Engineering & System Analysis Project</p>
+
+          <div
+            class="inline-block bg-gray-800 rounded-xl p-6 mb-8 text-left text-sm text-gray-300 border border-gray-700">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div>
+                <span class="block text-gray-500 mb-1 text-xs uppercase">Team Members</span>
+                FlowFix
+              </div>
+              <div>
+                <span class="block text-gray-500 mb-1 text-xs uppercase">Department</span>
+                Computer Science and Engineering
+              </div>
+              <div>
+                <span class="block text-gray-500 mb-1 text-xs uppercase">University</span>
+                Southeast University
+              </div>
+              <div>
+                <span class="block text-gray-500 mb-1 text-xs uppercase">Instructor</span>
+                Md. Tanbeer Jubaer
+              </div>
+            </div>
+          </div>
+
+          <p class="text-xs text-gray-500 mb-2">Developed for academic and educational purposes.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Appending to a fifth chunk because of file size -->
+  </div>
+</body>
+
+</html>
